@@ -18,7 +18,7 @@ class GabCell: UITableViewCell {
 
     upButton.enabled = false
     downButton.hidden = true
-    GabObject?.incrementKey("gabVotes")
+    GabObject?.incrementKey("gabVotes", byAmount: 1)
     GabObject?.addUniqueObject(PFUser.currentUser().objectId, forKey: "gabVoters")
     gabVote.text = GabObject?.objectForKey("gabVotes").stringValue
     GabObject?.saveEventually()

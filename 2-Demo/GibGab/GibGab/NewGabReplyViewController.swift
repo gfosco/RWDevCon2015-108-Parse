@@ -26,7 +26,7 @@ class NewGabReplyViewController: UIViewController {
     self.view.addSubview(activity)
     activity.startAnimating()
   
-    // (TODO:LAB)
+    // (TODO:LAB) Save the reply and move the following into the completion block
     
     activity.stopAnimating()
     activity.removeFromSuperview()

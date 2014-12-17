@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+class ViewController: UIViewController, PFSignUpViewControllerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,11 +22,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
   @IBAction func didTapLogIn(sender: AnyObject) {
 
-    var loginController = PFLogInViewController()
-    loginController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.DismissButton
-    loginController.delegate = self
-    
-    presentViewController(loginController, animated: true, completion: nil)
+    // (TODO:CHALLENGE) Use PFLogInViewController as we did PFSignUpViewController below
   }
     
   @IBAction func didTapSignUp(sender: AnyObject) {
@@ -36,12 +32,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     signupController.delegate = self
     
     presentViewController(signupController, animated: true, completion: nil)
-  }
-  
-  // Successful login:
-  func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
-    logInController.dismissViewControllerAnimated(true, completion: nil)
-    performSegueWithIdentifier("goToMain", sender: self)
   }
   
   // Successful signup:

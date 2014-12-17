@@ -22,7 +22,12 @@ class GabRepliesViewController: PFQueryTableViewController {
     self.pullToRefreshEnabled = true
     self.paginationEnabled = false
   }
-    
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    loadObjects()
+  }
+  
   override func queryForTable() -> PFQuery! {
     var query = PFQuery(className: className)
     

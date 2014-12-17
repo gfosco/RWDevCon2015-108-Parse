@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
   @IBAction func didTapLogIn(sender: AnyObject) {
 
-    // (TODO:DEMO) Add code to launch PFLogInViewController
+    // (TODO:CHALLENGE) Add code to launch PFLogInViewController just as PFSignUpViewController is used below
       
   }
     

@@ -53,7 +53,9 @@ class GabsViewController: PFQueryTableViewController {
   }
     
   @IBAction func didTapLogOut(sender: AnyObject) {
-    PFUser.logOut()
+    
+    // (TODO:CHALLENGE) Use the logOut method of PFUser
+    
     dismissViewControllerAnimated(true, completion: nil)
   }
 }

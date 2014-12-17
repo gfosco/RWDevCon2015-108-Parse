@@ -21,6 +21,11 @@ class GabsViewController: PFQueryTableViewController {
     self.pullToRefreshEnabled = true
     self.paginationEnabled = false
   }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    loadObjects()
+  }
     
   override func queryForTable() -> PFQuery! {
     var query = PFQuery(className: className)
@@ -47,4 +52,10 @@ class GabsViewController: PFQueryTableViewController {
     }
   }
     
+  @IBAction func didTapLogOut(sender: AnyObject) {
+    
+    // (TODO:CHALLENGE) Use the logOut method of PFUser
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
+  }
 }
