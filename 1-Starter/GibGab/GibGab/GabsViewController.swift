@@ -6,9 +6,12 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+import ParseUI
+
 class GabsViewController: PFQueryTableViewController {
 
-  let className : String = "GibGabs"
+  let className : String = "Gabs"
     
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -30,7 +33,7 @@ class GabsViewController: PFQueryTableViewController {
   override func queryForTable() -> PFQuery! {
     var query = PFQuery(className: className)
     
-    // (TODO:LAB) Remove this and add code to properly constrain and order the query
+    // (TODO:DEMO) Remove this and add code to properly constrain and order the query
     query.whereKey("invalid", equalTo: true)
     
     return query;

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class NewGabViewController: UIViewController, UITextViewDelegate {
 
   @IBOutlet weak var gabText: UITextView!

@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="296.5" y="426.5"/>
         </scene>
-        <!--GibGab-->
+        <!--Gabs-->
         <scene sceneID="pQa-aB-8gt">
             <objects>
                 <tableViewController id="Zxa-Sw-pFx" customClass="GabsViewController" customModule="GibGab" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,10 +115,10 @@
                             <outlet property="delegate" destination="Zxa-Sw-pFx" id="6Qe-0L-gSN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GibGab" id="kJb-MD-xK3">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="m1d-5f-VLb">
+                    <navigationItem key="navigationItem" title="Gabs" id="kJb-MD-xK3">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="wIv-nA-D3B">
                             <connections>
-                                <action selector="didTapLogOut:" destination="Zxa-Sw-pFx" id="ufB-RP-cs5"/>
+                                <action selector="didTapLogOut:" destination="Zxa-Sw-pFx" id="oqh-OU-E8N"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New" id="huq-fV-BfI">

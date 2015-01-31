@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class NewGabViewController: UIViewController, UITextViewDelegate {
 
   @IBOutlet weak var gabText: UITextView!
@@ -25,10 +27,12 @@ class NewGabViewController: UIViewController, UITextViewDelegate {
     self.view.addSubview(activity)
     activity.startAnimating()
 
-    var gab = PFObject(className: "GibGabs")
+    var gab = PFObject(className: "Gabs")
     gab["gabText"] = gabText.text
     gab["gabVotes"] = 0
-    gab.saveInBackgroundWithBlock { (success: Bool, error: NSError!) -> Void in
+    gab["gabVoters"] = []
+    gab.saveInBackgroundWithBlock {
+      (success: Bool, error: NSError!) -> Void in
       activity.stopAnimating()
       activity.removeFromSuperview()
       self.navigationController?.popViewControllerAnimated(true)

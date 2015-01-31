@@ -6,9 +6,12 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+import ParseUI
+
 class GabsViewController: PFQueryTableViewController {
 
-  let className : String = "GibGabs"
+  let className : String = "Gabs"
     
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -23,29 +26,42 @@ class GabsViewController: PFQueryTableViewController {
   }
   
   override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(true)
+    super.viewDidAppear(animated)
     loadObjects()
   }
     
   override func queryForTable() -> PFQuery! {
     var query = PFQuery(className: className)
     
-    query.orderByDescending("updatedAt")
+    query.orderByDescending("createdAt")
     query.limit = 50
-    
+
     return query;
   }
     
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier("GabCell") as GabCell
+    cell.upButton.hidden = false
+    cell.downButton.hidden = false
+
     var object = objectAtIndexPath(indexPath)
     cell.gabText.text = object["gabText"] as String!
     cell.gabVote.text = object["gabVotes"].stringValue
     cell.GabObject = object
+      
+    var voters = object["gabVoters"] as Array<String>
+    for voter in voters {
+      if (voter == PFUser.currentUser().objectId) {
+        cell.upButton.hidden = true
+        cell.downButton.hidden = true
+      }
+    }
+
     return cell
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
     if (segue.identifier == "toGabReplies") {
       var destination = segue.destinationViewController as GabRepliesViewController
         destination.GabObject = objectAtIndexPath(tableView.indexPathForSelectedRow())
@@ -56,6 +72,6 @@ class GabsViewController: PFQueryTableViewController {
     
     // (TODO:CHALLENGE) Use the logOut method of PFUser
     
-    dismissViewControllerAnimated(true, completion: nil)
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

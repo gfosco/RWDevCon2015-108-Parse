@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class NewGabReplyViewController: UIViewController {
 
   var GabObject : PFObject?
@@ -25,16 +27,19 @@ class NewGabReplyViewController: UIViewController {
     activity.hidesWhenStopped = true
     self.view.addSubview(activity)
     activity.startAnimating()
-
-    var reply = PFObject(className: "GibGabReplies")
+  
+    var reply = PFObject(className: "GabReplies")
     reply["replyText"] = replyText.text
     reply["replyUsername"] = PFUser.currentUser().objectForKey("username")
     reply["gabParent"] = GabObject
-    reply.saveInBackgroundWithBlock { (success: Bool, error: NSError!) -> Void in
+    
+    reply.saveInBackgroundWithBlock {
+      (success: Bool, error: NSError!) -> Void in
       activity.stopAnimating()
       activity.removeFromSuperview()
       self.navigationController?.popViewControllerAnimated(true)
     }
+
   }
     
 }

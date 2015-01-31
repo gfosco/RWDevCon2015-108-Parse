@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class ViewController: UIViewController, PFSignUpViewControllerDelegate {
 
@@ -16,26 +18,29 @@ class ViewController: UIViewController, PFSignUpViewControllerDelegate {
     
   override func viewDidAppear(animated: Bool) {
     if (PFUser.currentUser() != nil) {
-      performSegueWithIdentifier("goToMain", sender: self)
+      self.performSegueWithIdentifier("goToMain", sender: self)
     }
   }
 
   @IBAction func didTapLogIn(sender: AnyObject) {
 
-    // (TODO:CHALLENGE) Use PFLogInViewController just as we used PFSignUpViewController below
-    
+    // (TODO:CHALLENGE) Add code to launch PFLogInViewController just as PFSignUpViewController is used below
+      
   }
     
   @IBAction func didTapSignUp(sender: AnyObject) {
-      
+    
+    NSLog("%s","Hello")
     var signupController = PFSignUpViewController()
-    signupController.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+    signupController.fields = PFSignUpFields.UsernameAndPassword
+      | PFSignUpFields.SignUpButton
+      | PFSignUpFields.DismissButton
     signupController.delegate = self
     
     presentViewController(signupController, animated: true, completion: nil)
+    
   }
   
-  // Successful signup:
   func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
     signUpController.dismissViewControllerAnimated(true, completion: nil)
     performSegueWithIdentifier("goToMain", sender: self)

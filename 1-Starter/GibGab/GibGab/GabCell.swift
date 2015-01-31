@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class GabCell: UITableViewCell {
   
   @IBOutlet weak var gabText: UILabel!
@@ -16,7 +18,7 @@ class GabCell: UITableViewCell {
     
   @IBAction func didTapVoteUp(sender: AnyObject) {
       
-    // (TODO:LAB) Add code to increment the score and save the Gab
+    // (TODO:DEMO) Add code to increment the score and save the Gab
         
   }
     

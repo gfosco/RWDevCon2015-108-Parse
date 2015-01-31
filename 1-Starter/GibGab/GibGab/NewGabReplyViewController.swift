@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class NewGabReplyViewController: UIViewController {
 
   var GabObject : PFObject?

@@ -13,10 +13,6 @@
 		14B490DE1A3AAA2700A3E426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B490DC1A3AAA2700A3E426 /* Main.storyboard */; };
 		14B490FA1A3AAA4C00A3E426 /* rwdevcon-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B490F81A3AAA4C00A3E426 /* rwdevcon-bg.png */; };
 		14B490FB1A3AAA4C00A3E426 /* rwdevcon-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B490F91A3AAA4C00A3E426 /* rwdevcon-logo.png */; };
-		14B491021A3AAB7000A3E426 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B490FE1A3AAB7000A3E426 /* Bolts.framework */; };
-		14B491031A3AAB7000A3E426 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B490FF1A3AAB7000A3E426 /* Parse.framework */; };
-		14B491041A3AAB7000A3E426 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B491001A3AAB7000A3E426 /* ParseCrashReporting.framework */; };
-		14B491051A3AAB7000A3E426 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B491011A3AAB7000A3E426 /* ParseUI.framework */; };
 		14B491121A3AAB9700A3E426 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B491061A3AAB9700A3E426 /* Accounts.framework */; };
 		14B491131A3AAB9700A3E426 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B491071A3AAB9700A3E426 /* AudioToolbox.framework */; };
 		14B491141A3AAB9700A3E426 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B491081A3AAB9700A3E426 /* CFNetwork.framework */; };
@@ -43,6 +39,10 @@
 		14EEAA0F1A3AC5DB0063869C /* NewGabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EEAA0E1A3AC5DB0063869C /* NewGabViewController.swift */; };
 		14EEAA111A3ACCED0063869C /* GabRepliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EEAA101A3ACCED0063869C /* GabRepliesViewController.swift */; };
 		14EEAA131A3ACF030063869C /* GabReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EEAA121A3ACF030063869C /* GabReplyCell.swift */; };
+		14FC66371A7C0DE100EDC290 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC66331A7C0DE100EDC290 /* Bolts.framework */; };
+		14FC66381A7C0DE100EDC290 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC66341A7C0DE100EDC290 /* Parse.framework */; };
+		14FC66391A7C0DE100EDC290 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC66351A7C0DE100EDC290 /* ParseCrashReporting.framework */; };
+		14FC663A1A7C0DE100EDC290 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC66361A7C0DE100EDC290 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +54,6 @@
 		14B490DD1A3AAA2700A3E426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14B490F81A3AAA4C00A3E426 /* rwdevcon-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rwdevcon-bg.png"; sourceTree = "<group>"; };
 		14B490F91A3AAA4C00A3E426 /* rwdevcon-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rwdevcon-logo.png"; sourceTree = "<group>"; };
-		14B490FE1A3AAB7000A3E426 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		14B490FF1A3AAB7000A3E426 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		14B491001A3AAB7000A3E426 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		14B491011A3AAB7000A3E426 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		14B491061A3AAB9700A3E426 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		14B491071A3AAB9700A3E426 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		14B491081A3AAB9700A3E426 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -69,7 +65,6 @@
 		14B4910E1A3AAB9700A3E426 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		14B4910F1A3AAB9700A3E426 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		14B491111A3AAB9700A3E426 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		14B4911E1A3AABC500A3E426 /* GibGab-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GibGab-Bridging-Header.h"; sourceTree = "<group>"; };
 		14B491211A3AABF400A3E426 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		14B491231A3AAD4200A3E426 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		14EEA9F81A3AADF10063869C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,6 +80,10 @@
 		14EEAA0E1A3AC5DB0063869C /* NewGabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGabViewController.swift; sourceTree = "<group>"; };
 		14EEAA101A3ACCED0063869C /* GabRepliesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GabRepliesViewController.swift; sourceTree = "<group>"; };
 		14EEAA121A3ACF030063869C /* GabReplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GabReplyCell.swift; sourceTree = "<group>"; };
+		14FC66331A7C0DE100EDC290 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		14FC66341A7C0DE100EDC290 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		14FC66351A7C0DE100EDC290 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		14FC66361A7C0DE100EDC290 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,19 +95,19 @@
 				14B491221A3AABF400A3E426 /* libsqlite3.dylib in Frameworks */,
 				14B491121A3AAB9700A3E426 /* Accounts.framework in Frameworks */,
 				14B491131A3AAB9700A3E426 /* AudioToolbox.framework in Frameworks */,
+				14FC66381A7C0DE100EDC290 /* Parse.framework in Frameworks */,
 				14B491141A3AAB9700A3E426 /* CFNetwork.framework in Frameworks */,
 				14B491151A3AAB9700A3E426 /* CoreGraphics.framework in Frameworks */,
 				14B491161A3AAB9700A3E426 /* CoreLocation.framework in Frameworks */,
 				14B491171A3AAB9700A3E426 /* libz.dylib in Frameworks */,
+				14FC663A1A7C0DE100EDC290 /* ParseUI.framework in Frameworks */,
 				14B491181A3AAB9700A3E426 /* MobileCoreServices.framework in Frameworks */,
 				14B491191A3AAB9700A3E426 /* QuartzCore.framework in Frameworks */,
 				14B4911A1A3AAB9700A3E426 /* Security.framework in Frameworks */,
 				14B4911B1A3AAB9700A3E426 /* Social.framework in Frameworks */,
 				14B4911D1A3AAB9700A3E426 /* SystemConfiguration.framework in Frameworks */,
-				14B491031A3AAB7000A3E426 /* Parse.framework in Frameworks */,
-				14B491041A3AAB7000A3E426 /* ParseCrashReporting.framework in Frameworks */,
-				14B491051A3AAB7000A3E426 /* ParseUI.framework in Frameworks */,
-				14B491021A3AAB7000A3E426 /* Bolts.framework in Frameworks */,
+				14FC66371A7C0DE100EDC290 /* Bolts.framework in Frameworks */,
+				14FC66391A7C0DE100EDC290 /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +147,6 @@
 				14B490DA1A3AAA2700A3E426 /* ViewController.swift */,
 				14B490DC1A3AAA2700A3E426 /* Main.storyboard */,
 				14B490D61A3AAA2700A3E426 /* Supporting Files */,
-				14B4911E1A3AABC500A3E426 /* GibGab-Bridging-Header.h */,
 				14EEA9FE1A3ABD0D0063869C /* GabCell.swift */,
 				14EEAA0C1A3AC0850063869C /* GabsViewController.swift */,
 				14EEAA0E1A3AC5DB0063869C /* NewGabViewController.swift */,
@@ -162,6 +160,10 @@
 		14B490D61A3AAA2700A3E426 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14FC66331A7C0DE100EDC290 /* Bolts.framework */,
+				14FC66341A7C0DE100EDC290 /* Parse.framework */,
+				14FC66351A7C0DE100EDC290 /* ParseCrashReporting.framework */,
+				14FC66361A7C0DE100EDC290 /* ParseUI.framework */,
 				14B491231A3AAD4200A3E426 /* libstdc++.6.dylib */,
 				14B491211A3AABF400A3E426 /* libsqlite3.dylib */,
 				14B491061A3AAB9700A3E426 /* Accounts.framework */,
@@ -175,10 +177,6 @@
 				14B4910E1A3AAB9700A3E426 /* Security.framework */,
 				14B4910F1A3AAB9700A3E426 /* Social.framework */,
 				14B491111A3AAB9700A3E426 /* SystemConfiguration.framework */,
-				14B490FE1A3AAB7000A3E426 /* Bolts.framework */,
-				14B490FF1A3AAB7000A3E426 /* Parse.framework */,
-				14B491001A3AAB7000A3E426 /* ParseCrashReporting.framework */,
-				14B491011A3AAB7000A3E426 /* ParseUI.framework */,
 				14B490D71A3AAA2700A3E426 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -386,7 +384,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GibGab/GibGab-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -407,7 +405,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GibGab/GibGab-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

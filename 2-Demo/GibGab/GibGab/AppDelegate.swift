@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    ParseCrashReporting.enable()
+    // Use your own Application Id and Client Key here:
     Parse.setApplicationId("RejUfvOGKeZMH9aFtZizEkl9SZ9f9CVPwfVIkjbs",
       clientKey: "Gx8qjENNX2c8phKxuKOkQHhQ7QKeDktJJIbIZD9e")
     PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, nil)

@@ -6,10 +6,13 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+import ParseUI
+
 class GabRepliesViewController: PFQueryTableViewController {
     
   var GabObject : PFObject?
-  let className : String = "GibGabReplies"
+  let className : String = "GabReplies"
 
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -27,7 +30,7 @@ class GabRepliesViewController: PFQueryTableViewController {
     super.viewDidAppear(animated)
     loadObjects()
   }
-    
+  
   override func queryForTable() -> PFQuery! {
     var query = PFQuery(className: className)
     
@@ -40,9 +43,11 @@ class GabRepliesViewController: PFQueryTableViewController {
     
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier("GabReplyCell") as GabReplyCell
+    
     var object = objectAtIndexPath(indexPath)
     cell.replyText.text = object["replyText"] as String!
     cell.replyUsername.text = object["replyUsername"] as String!
+    
     return cell
   }
   

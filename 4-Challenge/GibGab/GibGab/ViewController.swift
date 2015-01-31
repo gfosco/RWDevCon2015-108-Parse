@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+class ViewController: UIViewController, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -16,35 +18,34 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
   override func viewDidAppear(animated: Bool) {
     if (PFUser.currentUser() != nil) {
-      performSegueWithIdentifier("goToMain", sender: self)
+      self.performSegueWithIdentifier("goToMain", sender: self)
     }
   }
 
   @IBAction func didTapLogIn(sender: AnyObject) {
 
     var loginController = PFLogInViewController()
-    loginController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.DismissButton
+    loginController.fields = PFLogInFields.UsernameAndPassword
+      | PFLogInFields.LogInButton
+      | PFLogInFields.DismissButton
     loginController.delegate = self
     
     presentViewController(loginController, animated: true, completion: nil)
+    
   }
     
   @IBAction func didTapSignUp(sender: AnyObject) {
-      
+    
     var signupController = PFSignUpViewController()
-    signupController.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+    signupController.fields = PFSignUpFields.UsernameAndPassword
+      | PFSignUpFields.SignUpButton
+      | PFSignUpFields.DismissButton
     signupController.delegate = self
     
     presentViewController(signupController, animated: true, completion: nil)
+    
   }
   
-  // Successful login:
-  func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
-    logInController.dismissViewControllerAnimated(true, completion: nil)
-    performSegueWithIdentifier("goToMain", sender: self)
-  }
-  
-  // Successful signup:
   func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
     signUpController.dismissViewControllerAnimated(true, completion: nil)
     performSegueWithIdentifier("goToMain", sender: self)

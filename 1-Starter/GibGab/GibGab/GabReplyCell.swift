@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class GabReplyCell: UITableViewCell {
 
   @IBOutlet weak var replyText: UILabel!

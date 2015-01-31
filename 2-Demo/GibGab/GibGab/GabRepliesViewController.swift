@@ -6,10 +6,13 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+import ParseUI
+
 class GabRepliesViewController: PFQueryTableViewController {
     
   var GabObject : PFObject?
-  let className : String = "GibGabReplies"
+  let className : String = "GabReplies"
 
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)

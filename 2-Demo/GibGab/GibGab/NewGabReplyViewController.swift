@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 RWDevCon. All rights reserved.
 //
 
+import Parse
+
 class NewGabReplyViewController: UIViewController {
 
   var GabObject : PFObject?
@@ -26,7 +28,7 @@ class NewGabReplyViewController: UIViewController {
     self.view.addSubview(activity)
     activity.startAnimating()
   
-    // (TODO:LAB) Save the reply and move the following into the completion block
+    // (TODO:LAB) Save the reply and move the following code into the completion block
     
     activity.stopAnimating()
     activity.removeFromSuperview()
