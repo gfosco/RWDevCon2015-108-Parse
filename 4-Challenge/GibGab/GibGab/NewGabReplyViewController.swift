@@ -28,6 +28,8 @@ class NewGabReplyViewController: UIViewController {
     self.view.addSubview(activity)
     activity.startAnimating()
   
+    PFAnalytics.trackEventInBackground("new-reply", block: nil)
+    
     var reply = PFObject(className: "GabReplies")
     reply["replyText"] = replyText.text
     reply["replyUsername"] = PFUser.currentUser().objectForKey("username")

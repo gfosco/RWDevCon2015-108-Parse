@@ -27,6 +27,8 @@ class NewGabViewController: UIViewController, UITextViewDelegate {
     self.view.addSubview(activity)
     activity.startAnimating()
 
+    PFAnalytics.trackEventInBackground("new-gab", block: nil)
+    
     var gab = PFObject(className: "Gabs")
     gab["gabText"] = gabText.text
     gab["gabVotes"] = 0

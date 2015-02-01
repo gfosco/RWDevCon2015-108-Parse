@@ -42,3 +42,9 @@ Now, in the **tableView:cellForRowAtIndexPath** method, configure the **GabReply
     cell.replyUsername.text = object["replyUsername"] as String!
     
 Now you should be able to add replies to Gabs and see the replies for any Gabs in the system.
+
+Lets use Parse Analytics to track an event when a user submits a Gab entry.  Open **NewGabViewController.swift** and right before the PFObject is created, add:
+
+    PFAnalytics.trackEventInBackground("new-gab", block: nil)
+    
+In the Parse Analytics dashboard, you'll be able to see the various analytics events you decide to track, and can create & save custom breakdowns.
